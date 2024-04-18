@@ -14,9 +14,9 @@ public class AccountNumberFormatter {
    */
   public static String formatAccountNumber(int literalAccountNumber) {
     String numberAccount = Integer.toString(literalAccountNumber);
-    if (literalAccountNumber < 6) {
+    if (numberAccount.length() < 6) {
       return StringUtils.leftPad(numberAccount, 6, "0");
-    } else if (literalAccountNumber > 6) {
+    } else if (numberAccount.length() > 6) {
       return StringUtils.right(numberAccount, 6);
     } else {
       return numberAccount;
