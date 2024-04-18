@@ -12,7 +12,7 @@ public class AccountNumberFormatter {
    *
    * @param literalAccountNumber número da conta
    */
-  public String formatAccountNumber(int literalAccountNumber) {
+  public static String formatAccountNumber(int literalAccountNumber) {
     String numberAccount = Integer.toString(literalAccountNumber);
     if (literalAccountNumber < 6) {
       return StringUtils.leftPad(numberAccount, 6, "0");
