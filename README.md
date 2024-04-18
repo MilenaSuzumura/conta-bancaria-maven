@@ -24,52 +24,47 @@ Execute:  `mvn install`
 
 <br>
 
-## 👥 Informações gerais 👥
+## 💁‍♀️ Informações gerais 💁‍♀️
 
-### 🏠 Class SmartHouse 🏠
+### 🧾 Aplicação 🧾
 
-<details>
-  <summary><strong>💡 Controle da Lâmpada	💡</strong></summary><br>
+1 - Rode o arquivo `Application.java`. A `Application.java` vai te pedir para `Informar o número da conta`;
 
-1 - Criei um atributo chamado `lampada` do tipo `boolean` para classificar se a lampada está ligada ou apagada;
+2 - Após inserir o número, ele retornará o número da conta com no `máximo 6 digitos`;
 
-2 - Para mudar o estado da lampada, utilizei dois métodos: `ligarLampada` e `desligarLampada`;
+3 - Caso o número tiver `menos que 6 caracters`, ele adicionará `0` para completar os números que faltam;
 
-3 - Para verificar o estado da lampada, basta chamar o método `isLampadaLigada` que retornará `true` ou `false`.
+<strong>Exemplo:</strong>
+````
+Informe o número da conta:
+1
+Número da conta: 000001
+````
 
-</details>
+4 - Caso o número tiver `mais de 6 caracters`, o código `tirará os números na frente` para obter `apenas 6 caracters`;
 
-<details>
-  <summary><strong>🌐 Conexão à Internet	🌐</strong></summary><br>
+<strong>Exemplo:</strong>
+````
+Informe o número da conta:
+123456789
+Número da conta: 456789
+````
 
-1 - Criei um método chamado `conectarInternet` que irá receber o atributo `connectionRate` do tipo `double` e deverá retornar `true`ou `false`;
+5 - Caso tiver `a quantidade correta`, o código devolverá do jeito que está.
 
-2 - Para o atributo `connectionRate` ser true, a taxa de conexão deverá ser maior que 0.5, indicando uma conexão bem-sucedida;
+<strong>Exemplo:</strong>
+````
+Informe o número da conta:
+123456
+Número da conta: 123456
+````
 
-3 - Caso o atributo `connectionRate` for menor ou igual a 0.5, o método deve retornar false, indicando que a conexão falhou.
+6 - E se o usuário mandar algo que `não for um número`, ele retornará uma mensagem de erro.
 
-</details>
+<strong>Exemplo:</strong>
+````
+Informe o número da conta:
+abelha
+Número da conta inválido!
 
-<br>
-
-### 👤 Residente 👤
-
-<details>
-  <summary><strong>🫂 Criando Residente	🫂</strong></summary><br>
-
-1 - Criei vários atributos chamados: `nome` do tipo `String`, `idade` do tipo `int`, `peso` do tipo `double` e `altura` do tipo `double`;
-
-2 - Criei um constructor para receber os valores do atributos e assim, poder ser acessado.
-
-</details>
-
-<details>
-  <summary><strong>🧮 Cálculo do IMC	🧮</strong></summary><br>
-
-1 - Criei um método chamado `calcularImc` que deverá retornar um `double` com o resultado do cálculo do IMC do residente;
-
-2 - Para fazer o cálculo, precisei descobrir o resultado da `alturaAoQuadrado`. Ou seja, multipliquei `altura` pela `altura`;
-
-3 - Após descobrir o valor de `alturaAoQuadrado`, dividi `peso` por `alturaAoQuadrado`.
-
-</details>
+````
